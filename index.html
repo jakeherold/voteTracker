@@ -4,23 +4,36 @@
 <head>
   <title>VoteTracker</title>
   <link rel="stylesheet" href="vote.css"></link>
+  <link href='https://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'></link>
+  <link type="text/css" href="vote.css" rel="stylesheet" media="Screen"></link>
+  <link rel="stylesheet" href="mobile.css" type="text/css" media="handheld"></link>
+
 </head>
 <body>
-<h1>Vote Tracker</h1>
+<header>Vote Tracker</header>
 <h2>A Pair-Programing Project by Jake and Connor</h2>
-<p>A super-cool and effective tool for finding out which food is the most gross. </p>
 
-<div>
+
+<section>
   <div>
-     <img id="leftImage" src="images/tree2.jpg">
-     <img id="RightImage" src="images/city1.jpg">
+     <img id="leftImage" >
+     <figcaption>Tree Image</figcaption>
+     <img id="rightImage" >
+     <figcaption>City Image</figcaption>
   </div>
+</section>
+
 
   <div>
     <button id="voteButton">Vote</button>
     <button id="resetButton">Reset</button>
   </div>
-</div>
 
+<div id="chartContainer" style="height: 300px; width: 100%;">
+  </div>
+
+<footer>A super-cool and effective tool for finding out if people like trees or cities more.</footer>
+
+  <script type="text/javascript" src="canvasjs.min.js"></script>
   <script src="vote.js"></script>
   </html>

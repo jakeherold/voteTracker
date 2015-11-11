@@ -1,7 +1,18 @@
 # voteTracker
 Code project 3 for codefellows 201. Team coded by Jake Herold and Connor Cummings.
 
-10/9/15
+
+
+11/10/15
+Made the thing work. Added images that cycle and a chart.
+
+To-do:
+Clean up for mobile
+reformat script to a reasonable script style
+
+
+
+11/9/15
 Laid out basic framework/ codeflow on whiteboard. Began constructing our primary functions, found our images,
 
 To Do:
