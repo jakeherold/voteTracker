@@ -2,12 +2,26 @@
 var tree1 = new imageConstructor("images/tree1.jpg");
 var tree2 = new imageConstructor("images/tree2.jpg");
 var tree3 = new imageConstructor("images/tree3.jpg");
+var tree4 = new imageConstructor("images/tree4.jpg");
+var tree5 = new imageConstructor("images/tree5.jpg");
+var tree6 = new imageConstructor("images/tree6.jpg");
+var tree7 = new imageConstructor("images/tree7.jpg");
+var tree8 = new imageConstructor("images/tree8.jpg");
+var tree9 = new imageConstructor("images/tree9.jpg");
+var tree10 = new imageConstructor("images/tree10.jpg");
 var city1 = new imageConstructor("images/city1.jpg");
 var city2 = new imageConstructor("images/city2.jpg");
 var city3 = new imageConstructor("images/city3.jpg");
+var city4 = new imageConstructor("images/city4.jpg");
+var city5 = new imageConstructor("images/city5.jpg");
+var city6 = new imageConstructor("images/city6.jpg");
+var city7 = new imageConstructor("images/city7.jpg");
+var city8 = new imageConstructor("images/city8.jpg");
+var city9 = new imageConstructor("images/city9.jpg");
+var city10 = new imageConstructor("images/city10.jpg");
 
-treeDirectory = [tree1, tree2, tree3];
-cityDirectory = [city1, city2, city3];
+treeDirectory = [tree1, tree2, tree3, tree4, tree5, tree6, tree5, tree8, tree8, tree10];
+cityDirectory = [city1, city2, city3, city4, city5, city6, city7, city8, city9, city10];
 midwayTreeDirectory = [];
 midwayCityDirectory = [];
 emptyHatTrees = [];
@@ -123,7 +137,7 @@ rightImageEl.addEventListener("click", selectImageRight);
 //voteButton.addEventListener("click", voteSubmit);
 
 
-////////////////////select-image///////////////////////////////////////////////
+///////////////'onClick' select-image///////////////////////////////////////////////
 
 function selectImageLeft() {
 
@@ -138,7 +152,6 @@ function selectImageRight(){
   console.log("i'm image " + midwayCityDirectory[0].filePath + " and my vote count is " + midwayCityDirectory[0].voteNumber);
   cycleImages();
 }
-
 
 function resetImages(){
   //treesDirectory  = emptyHatTrees;
@@ -160,7 +173,7 @@ function resetImages(){
 
     if ((cityDirectory.length)=== (emptyHatCities.length)){
         for (kk = 0; kk < emptyHatCities.length; kk++){
-          delete emptyHatCities[kk];
+          emptyHatCities.pop();
       }
     }
   }
@@ -178,7 +191,7 @@ function resetImages(){
       },
       axisY: {
         title: "Total Vote number",
-        maximum: 100
+        maximum: 500
       },
       data: [
       {
@@ -195,21 +208,7 @@ function resetImages(){
 
       ]
     });
-
+//chart.destroy();
 chart.render();
 }
 
-
-
-
-/*var treeVoteTotal =  //Added functionality for later (cumulitive chart)
-
-
-for (ii = 0; ii<treeDirectory.length; ii++ ){
-
-
-total+=
-
-
-}
-*/

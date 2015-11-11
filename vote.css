@@ -17,15 +17,27 @@ body{
 background-color: #EFECCA;
 }
 #leftImage{
-width: 30%;
-display: inline-block;
+width: 400px;
+height: 300px;
+float: left;
+/*display: inline-block;*/
 
 
 }
 #rightImage{
-width:30%;
+width: 400px;
+height: 300px;
 display: inline-block;
 
 }
 
+#chartContainer{
+vertical-align: bottom;
+}
 
+@media screen and (max-width: 690px) {
+    .mobileClass {
+        width: 40%;
+        height: ;
+    }
+}
