@@ -1,43 +1,72 @@
 h2 {
   font-family: 'Wellfleet';
   font-color: #002F2F;
+  text-align: center;
 }
 header{
   font-family: 'Wellfleet';
   font-color:#002F2F;
   font-size: 3em;
+  text-align: center;
 }
-button{
-color:black;
-background-color: #046380;
 
-}
 
 body{
 background-color: #EFECCA;
 }
+
+footer{
+  margin-left: 25%;
+
+
+}
 #leftImage{
 width: 400px;
 height: 300px;
-float: left;
 /*display: inline-block;*/
+margin:auto;
+
 
 
 }
 #rightImage{
 width: 400px;
 height: 300px;
-display: inline-block;
+/*display: inline-block;*/
+
 
 }
 
 #chartContainer{
-vertical-align: bottom;
+margin:auto;
 }
 
-@media screen and (max-width: 690px) {
+/*@media screen and (max-width: 690px) {
     .mobileClass {
-        width: 40%;
-        height: ;
+      width: 40%;
     }
+    #chartContainer{
+      width:80%;
+    }
+
 }
+*/
+#outImgDiv{
+  margin: auto;
+  margin-left: 15%;
+}
+
+#innerImgDiv{
+
+
+}
+
+#street-view {
+/*display:none  ;*/
+visibility: hidden;
+height: 400px;
+width: 400px;
+}
+
+
+
