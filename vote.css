@@ -58,7 +58,15 @@ margin:auto;
 
 #innerImgDiv{
 
-/*margin-top: 50%;
-margin-bottom:50%;*/
+
 }
+
+#street-view {
+/*display:none  ;*/
+visibility: hidden;
+height: 400px;
+width: 400px;
+}
+
+
 

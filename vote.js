@@ -27,6 +27,10 @@ midwayCityDirectory = [];
 emptyHatTrees = [];
 emptyHatCities = [];
 
+cityUserVote = 0;
+treeUserVote = 0;
+totalUserVote = cityUserVote + treeUserVote;
+
 var totalTreeTemp = function() {
   var treeTemp = 0;
   for (ii = 0; ii<treeDirectory.length; ii++ ){
@@ -70,7 +74,7 @@ leftImageEl = $('#leftImage')[0];
 rightImageEl = document.getElementById("rightImage");
 resetButtonEl = document.getElementById("resetButton");
 voteButtonEl = document.getElementById("voteButton");
-
+streetView = $('#street-view')[0];
 
 //IMAGE DATA OBJECT CONSTRUCTION
 function imageConstructor(filePath){
@@ -126,7 +130,17 @@ function cycleImages(){
     if((cityDirectory.length === 0) && (treesDirectory.length === 0)){
         resetImages();
       }
+
       makeChart();
+
+      //spawn map on 15th vote
+    if ( totalUserVote > 14){
+        console.log("MAP 1 IS FIRING");
+        makeMap();
+        makeWeather();
+
+        totalUserVote=0;
+      }
 }
 
 leftImageEl.addEventListener("click", selectImageLeft);
@@ -145,12 +159,17 @@ function selectImageLeft() {
   treeVoteTotal++;
   console.log("i'm image " + midwayTreeDirectory[0].filePath + " and my vote count is " + midwayTreeDirectory[0].voteNumber);
   cycleImages();
+  treeUserVote++;
+  totalUserVote++;
+
 }
 function selectImageRight(){
   midwayCityDirectory[0].voteNumber++;
   cityVoteTotal++;
   console.log("i'm image " + midwayCityDirectory[0].filePath + " and my vote count is " + midwayCityDirectory[0].voteNumber);
   cycleImages();
+  cityUserVote++;
+  totalUserVote++;
 }
 
 function resetImages(){
@@ -177,6 +196,7 @@ function resetImages(){
       }
     }
   }
+
 }
 
 //CHART STUFF
@@ -212,3 +232,22 @@ function resetImages(){
 chart.render();
 }
 
+
+function makeMap(){
+  console.log("MAKE MAP FUNCTION 2 IS FIRING");
+
+  if(totalUserVote === 15){
+
+        streetView.style.visibility = "visible";
+    }
+
+
+
+  initialize();
+
+}
+
+
+function makeWeather(){
+
+}

@@ -3,13 +3,16 @@
 
 <head>
   <title>VoteTracker</title>
+  <meta charset="utf-8">
   <link rel="stylesheet" href="vote.css"></link>
   <link href='https://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'></link>
   <link type="text/css" href="vote.css" rel="stylesheet" media="Screen"></link>
   <link rel="stylesheet" href="mobile.css" type="text/css" media="handheld"></link>
 
+
 </head>
 <body>
+
 <header>Vote Tracker</header>
 <h2>A Pair-Programing Project by Jake and Connor</h2>
 
@@ -28,8 +31,18 @@
 <div id="chartContainer" style="height: 300px; width: 50%;" class="mobileClass">
   </div>
 
+
+
+<div id="street-view" height="300px" width="300px"></div>
+
+
 <footer>A super-cool and effective tool for finding out if people like trees or cities more.</footer>
   <script src= "jquery-2.1.4.min.js"></script>
   <script type="text/javascript" src="canvasjs.min.js"></script>
+
+  <script type="text/javascript" src="googleSnip.js"></script>
+  <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEcQ2MZTv2hdU8M6Et6tFUyCr3UUrC5fc
+         &signed_in=true&callback=initialize"></script>
   <script src="vote.js"></script>
   </html>
