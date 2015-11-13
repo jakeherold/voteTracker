@@ -1,3 +1,5 @@
+
+
 console.log("start");
 var weatherData = {};
 var temp_min = [];
@@ -39,7 +41,7 @@ function processResp (rObj){
   console.log("temp_max" + temp_max);
 }
 
-
+function makeWeather(){
 $.ajax(
   { url: "http://api.openweathermap.org/data/2.5/forecast?q=portland,us&mode=json&appid=d343a1cd6dcf1643a83e133b7658686e"
     }
@@ -58,6 +60,6 @@ $.ajax(
   console.log("XHR FAILURE.");
 });
 
-
+}
   ctx = $("canvas")[0].getContext("2d");
 
