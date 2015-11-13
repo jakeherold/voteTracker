@@ -10,7 +10,7 @@ function initialize(){
       pov: {heading:165, pitch: 0},
       zoom: 1
     });
-
-
-
 }
+
+
+
