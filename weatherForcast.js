@@ -16,7 +16,7 @@ var barData = {
       strokeColor : "rgba(220,220,220,0.8)",
       highlightFill: "rgba(220,220,220,0.75)",
       highlightStroke: "rgba(220,220,220,1)",
-      data : ["Filled with location min temp"]
+      data : []
     },
     { fillColor : "rgba(151,187,205,0.5)",
       strokeColor : "rgba(151,187,205,0.8)",
@@ -50,19 +50,14 @@ $.ajax(
   console.log("respObj = ", respObj);
   processResp(respObj);
   barData.datasets[0].data = temp_min.slice(0,7);
-  console.log(barData.datasets[0].data);
   barData.datasets[1].data = temp_max.slice(0,7);
-  console.log(barData.datasets[1].data);
-
-  var chart = new CanvasJS.Chart("weatherContainer", barData);
+  window.myBar = new Chart(ctx).Bar(barData, {responsive:true});
   console.log("Done with weather render");
-
-  chart.render();
 })
 .fail (function (){
   console.log("XHR FAILURE.");
 });
 
-/*window.onload = function() {
+
   ctx = $("canvas")[0].getContext("2d");
-}*/
+
