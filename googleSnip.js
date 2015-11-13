@@ -1,4 +1,5 @@
-var panorama;
+
+  var panorama;
 
 function initialize(){
   console.log("INITIALIZE IS FIRING")
