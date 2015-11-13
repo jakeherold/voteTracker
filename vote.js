@@ -106,49 +106,35 @@ makeChart();
 })();
 
 function cycleImages(){
-
   randomCityPlaceholder = randomCity();
   randomTreePlaceholder = randomTree();
   //Empties midway array into emptyHat array
   emptyHatTrees.push(midwayTreeDirectory[0]);
   //deletes and collapses midway array
-  midwayTreeDirectory.pop();
-
-
+      midwayTreeDirectory.pop();
   emptyHatCities.push(midwayCityDirectory[0]);
-  midwayCityDirectory.pop();
-
-  //put "enter chart" bit in here, first
-
+      midwayCityDirectory.pop();
   //re-writes the src of the images in html
   leftImageEl.src  = treeDirectory[randomTreePlaceholder].filePath;
   midwayTreeDirectory.push(treeDirectory[randomTreePlaceholder]);
   rightImageEl.src = cityDirectory[randomCityPlaceholder].filePath;
   midwayCityDirectory.push(cityDirectory[randomCityPlaceholder]);
-
   //if original array is empty, recycle everything
     if((cityDirectory.length === 0) && (treesDirectory.length === 0)){
         resetImages();
       }
-
       makeChart();
-
       //spawn map on 15th vote
     if ( totalUserVote > 14){
         console.log("MAP 1 IS FIRING");
         makeMap();
         makeWeather();
-
         totalUserVote=0;
       }
 }
 
 leftImageEl.addEventListener("click", selectImageLeft);
 rightImageEl.addEventListener("click", selectImageRight);
-//resetButtonEl.addEventListener("click", cycleImages);
-
-
-//voteButton.addEventListener("click", voteSubmit);
 
 
 ///////////////'onClick' select-image///////////////////////////////////////////////
@@ -196,12 +182,10 @@ function resetImages(){
       }
     }
   }
-
 }
 
-//CHART STUFF
+//CHART TREE VS CITY VOTE DATA
  function makeChart() {
-
     var treeChartTemp = treeVoteTotal;
     var cityChartTemp = cityVoteTotal;
     var chart = new CanvasJS.Chart("chartContainer",
@@ -222,32 +206,17 @@ function resetImages(){
         dataPoints: [
         { y: treeChartTemp, label: "Trees"},
         { y: cityChartTemp, label: "Cities"},
-
-        ]
-      }
-
-      ]
-    });
-//chart.destroy();
+        ]}]});
 chart.render();
 }
 
 
 function makeMap(){
   console.log("MAKE MAP FUNCTION 2 IS FIRING");
-
   if(totalUserVote === 15){
-
         streetView.style.visibility = "visible";
     }
-
-
-
   initialize();
-
 }
 
 
-function makeWeather(){
-
-}
