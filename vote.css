@@ -25,10 +25,18 @@ footer{
 width: 400px;
 height: 300px;
 margin:auto;
+border: 6px solid black;
+}
+#leftImage:hover{
+border: 6px solid green;
 }
 #rightImage{
 width: 400px;
 height: 300px;
+border: 6px solid black;
+}
+#rightImage:hover{
+border: 6px solid green;
 }
 
 #chartContainer{
