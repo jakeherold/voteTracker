@@ -1,3 +1,6 @@
+// var prizeLocation = (document.getElementById("vacationDestination").value);
+
+
 console.log("start");
 var weatherData = {};
 var temp_min = [];
@@ -10,7 +13,7 @@ function k2f(x) {
 }
 
 var barData = {
-  labels : ["0","1","2","3","4","5","6"],
+  labels : ["Day 1","Day 2", "Day 3"],
   datasets : [
     { fillColor : "rgba(220,220,220,0.5)",
       strokeColor : "rgba(220,220,220,0.8)",
@@ -39,9 +42,12 @@ function processResp (rObj){
   console.log("temp_max" + temp_max);
 }
 
+function makeWeather(){
+
+var siteURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + vactionCityDataOutput + ",us&mode=json&appid=d343a1cd6dcf1643a83e133b7658686e"
 
 $.ajax(
-  { url: "http://api.openweathermap.org/data/2.5/forecast?q=portland,us&mode=json&appid=d343a1cd6dcf1643a83e133b7658686e"
+  { url: siteURL
     }
   )
 //" + VacationDestination + "
@@ -58,6 +64,7 @@ $.ajax(
   console.log("XHR FAILURE.");
 });
 
+}
 
-  ctx = $("canvas")[0].getContext("2d");
+ctx = $("canvas")[0].getContext("2d");
 

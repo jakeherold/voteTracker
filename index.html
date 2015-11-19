@@ -3,24 +3,28 @@
 
 <head>
   <title>VoteTracker</title>
-  <meta charset="utf-8">
   <link rel="stylesheet" href="vote.css"></link>
   <link href='https://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'></link>
   <link type="text/css" href="vote.css" rel="stylesheet" media="Screen"></link>
-  <link rel="stylesheet" href="mobile.css" type="text/css" media="handheld"></link>
-
 
 </head>
-<body>
-
+<body >
 <header>Vote Tracker</header>
 <h2>A Pair-Programing Project by Jake and Connor</h2>
 
+<div id="hidingButton">
+<p>Favorite Vacation Destination:</p>
+<input type= "text" id="vacationDestination" size = "10" placeholder="Portland">
+<button id ="inputButton" type="submit" value="Submit" onclick="printCity()" >Claim Prize</button>
+<!-- <button id ="inputButton" type="submit" value="Submit"  onclick="makeWeather()">Find out prize weather</button> -->
+<!-- onclick="processResp()" -->
+</div>
+
 <div id="outImgDiv">
   <div id="innerImgDiv">
-     <img id="leftImage" class="mobileClass" >
+     <img id="leftImage"  >
 
-     <img id="rightImage" class="mobileClass">
+     <img id="rightImage" >
 
   </div>
 </div>
@@ -28,19 +32,14 @@
 <br>
 
 
-<div id="chartContainer" style="height: 300px; width: 50%;" class="mobileClass">
-  </div>
+<div id="chartContainer" style="height: 300px; width: 50%;" class="mobileClass"> </div>
 
 <canvas id="canvas"></canvas>
 
 <div id="street-view" height="300px" width="300px"></div>
 
-<div>
-<p>Favorite Vacation Destination:</p>
-<input type= "text" name="VacationDestination" size = "10">
-<button onclick="vacation function()" src="images/add.gif" alt="add" width="10" height="10">Click Me!</button>
-
-</div>
+<button id ="cheatCity"  onclick="cheatCity()" > Cheat City </button>
+<button id ="cheatCity"  onclick="cheatCity()" > Cheat tree </button>
 
 
 <footer>A super-cool and effective tool for finding out if people like trees or cities more.</footer>
@@ -48,11 +47,8 @@
   <script type="text/javascript" src="canvasjs.min.js"></script>
   <script type="text/javascript" src="Chart.min.js"></script>
   <script type="text/javascript" src="weatherForcast.js"></script>
-
+  <script type="text/javascript" src="googleSnipBad.js"></script>
   <script type="text/javascript" src="googleSnip.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEcQ2MZTv2hdU8M6Et6tFUyCr3UUrC5fc&signed_in=true"></script>
-
-
-/
   <script src="vote.js"></script>
   </html>

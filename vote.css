@@ -17,40 +17,32 @@ background-color: #EFECCA;
 
 footer{
   margin-left: 25%;
-
-
+}
+#inputButton{
+  visibility: hidden;
 }
 #leftImage{
 width: 400px;
 height: 300px;
-/*display: inline-block;*/
 margin:auto;
-
-
-
+border: 6px solid black;
+}
+#leftImage:hover{
+border: 6px solid green;
 }
 #rightImage{
 width: 400px;
 height: 300px;
-/*display: inline-block;*/
-
-
+border: 6px solid black;
+}
+#rightImage:hover{
+border: 6px solid green;
 }
 
 #chartContainer{
 margin:auto;
 }
 
-/*@media screen and (max-width: 690px) {
-    .mobileClass {
-      width: 40%;
-    }
-    #chartContainer{
-      width:80%;
-    }
-
-}
-*/
 #outImgDiv{
   margin: auto;
   margin-left: 15%;
@@ -62,7 +54,6 @@ margin:auto;
 }
 
 #street-view {
-/*display:none  ;*/
 visibility: hidden;
 height: 400px;
 width: 400px;
