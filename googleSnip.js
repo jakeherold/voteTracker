@@ -1,4 +1,4 @@
-
+//OLD
   var panorama;
 
 function initialize(){
@@ -12,6 +12,4 @@ function initialize(){
       zoom: 1
     });
 }
-
-
 

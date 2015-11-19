@@ -132,7 +132,7 @@ function cycleImages(){
     if ( totalUserVote > 14){
         console.log("MAP 1 IS FIRING");
         makeMap();
-        makeWeather();
+        //makeWeather();
         totalUserVote=0;
       }
 }
@@ -225,4 +225,11 @@ function makeMap(){
   initialize();
 }
 
+var vactionCityDataOutput ="";
+
+var printCity = function (){
+  console.log(document.getElementById("vacationDestination").value);
+  vactionCityDataOutput = document.getElementById("vacationDestination").value;
+  makeWeather();
+}
 
