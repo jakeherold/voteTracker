@@ -222,7 +222,17 @@ function makeMap(){
   if(totalUserVote === 15){
         streetView.style.visibility = "visible";
     }
-  initialize();
+  if (accountTreeTaste > accountCityTaste){
+    alert("Nice work. trees are way better. You win a car and get to pick your vaction destination!");
+    initialize();
+    $('#inputButton').css('visibility','visible');
+
+  }
+  else {
+    alert("Citys suck. You suck. You are going to Mississippi. Pick a terrible city to go to, and then drive there in your crumby old car.");
+    initialize();
+    $('#inputButton').css('visibility','visible');
+  }
 }
 
 var vactionCityDataOutput ="";
@@ -231,5 +241,19 @@ var printCity = function (){
   console.log(document.getElementById("vacationDestination").value);
   vactionCityDataOutput = document.getElementById("vacationDestination").value;
   makeWeather();
+}
+
+var cheatCity = function (){
+  accountTreeTaste = 0;
+  accountCityTaste = 10000000;
+  totalUserVote = 15;
+  makeMap();
+}
+
+var cheatTree = function (){
+  accountTreeTaste = 100000000;
+  accountCityTaste = 0;
+  totalUserVote = 15;
+  makeMap();
 }
 

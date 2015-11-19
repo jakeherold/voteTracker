@@ -12,7 +12,7 @@
 <header>Vote Tracker</header>
 <h2>A Pair-Programing Project by Jake and Connor</h2>
 
-<div>
+<div id="hidingButton">
 <p>Favorite Vacation Destination:</p>
 <input type= "text" id="vacationDestination" size = "10" placeholder="Portland">
 <button id ="inputButton" type="submit" value="Submit" onclick="printCity()" >Claim Prize</button>
@@ -38,7 +38,8 @@
 
 <div id="street-view" height="300px" width="300px"></div>
 
-
+<button id ="cheatCity"  onclick="cheatCity()" > Cheat City </button>
+<button id ="cheatCity"  onclick="cheatCity()" > Cheat tree </button>
 
 
 <footer>A super-cool and effective tool for finding out if people like trees or cities more.</footer>
@@ -46,7 +47,7 @@
   <script type="text/javascript" src="canvasjs.min.js"></script>
   <script type="text/javascript" src="Chart.min.js"></script>
   <script type="text/javascript" src="weatherForcast.js"></script>
-
+  <script type="text/javascript" src="googleSnipBad.js"></script>
   <script type="text/javascript" src="googleSnip.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEcQ2MZTv2hdU8M6Et6tFUyCr3UUrC5fc&signed_in=true"></script>
   <script src="vote.js"></script>

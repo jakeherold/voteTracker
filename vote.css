@@ -17,8 +17,9 @@ background-color: #EFECCA;
 
 footer{
   margin-left: 25%;
-
-
+}
+#inputButton{
+  visibility: hidden;
 }
 #leftImage{
 width: 400px;
@@ -45,7 +46,6 @@ margin:auto;
 }
 
 #street-view {
-/*display:none  ;*/
 visibility: hidden;
 height: 400px;
 width: 400px;

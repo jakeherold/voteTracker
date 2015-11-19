@@ -13,7 +13,7 @@ function k2f(x) {
 }
 
 var barData = {
-  labels : ["min","max"],
+  labels : ["Day 1","Day 2", "Day 3"],
   datasets : [
     { fillColor : "rgba(220,220,220,0.5)",
       strokeColor : "rgba(220,220,220,0.8)",
@@ -43,10 +43,6 @@ function processResp (rObj){
 }
 
 function makeWeather(){
-//var prizeLocation = (document.getElementById("vacationDestination").value);
-
-//var siteURL = "http://api.openweathermap.org/data/2.5/forecast?q=portland,us&mode=json&appid=d343a1cd6dcf1643a83e133b7658686e"
-// + prizeLocation + vactionCityDataOutput
 
 var siteURL = "http://api.openweathermap.org/data/2.5/forecast?q=" + vactionCityDataOutput + ",us&mode=json&appid=d343a1cd6dcf1643a83e133b7658686e"
 
