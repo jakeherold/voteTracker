@@ -138,17 +138,9 @@ function cycleImages(){
 }
 
 leftImageEl.addEventListener("click", selectImageLeft);
-$('leftImageEl').hover(function(){
-    $(this).css("border", "green");
-    }, function(){
-    $(this).css("border", "black");
-});
+
 rightImageEl.addEventListener("click", selectImageRight);
-$('rightImageEl').hover(function(){
-    $(this).css("border", "green");
-    }, function(){
-    $(this).css("border", "black");
-});
+
 
 ///////////////'onClick' select-image///////////////////////////////////////////////
 
